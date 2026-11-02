@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1f1135" />
+      <stop offset="100%" stop-color="#070711" />
+    </radialGradient>
+    <linearGradient id="bladeL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0066ff" />
+    </linearGradient>
+    <linearGradient id="bladeR" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff0077" />
+      <stop offset="100%" stop-color="#ff7700" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="190" stroke="#2a1f4a" stroke-width="4" fill="none" stroke-dasharray="12 12" />
+  
+  <!-- Left Saber / Rhythm Blade -->
+  <path d="M 120 380 L 240 180 L 260 190 L 140 390 Z" fill="url(#bladeL)" filter="url(#glow)" />
+  <!-- Right Saber / Rhythm Blade -->
+  <path d="M 392 380 L 272 180 L 252 190 L 372 390 Z" fill="url(#bladeR)" filter="url(#glow)" />
+  
+  <!-- Beat Orbs -->
+  <circle cx="120" cy="256" r="28" fill="#00f0ff" filter="url(#glow)" />
+  <circle cx="392" cy="256" r="28" fill="#ff0077" filter="url(#glow)" />
+  
+  <!-- Center Warrior Core -->
+  <polygon points="256,120 310,230 256,340 202,230" fill="#ffffff" filter="url(#glow)" />
+  <circle cx="256" cy="230" r="16" fill="#ffd700" />
+</svg>
